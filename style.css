@@ -1,0 +1,137 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+  color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 0.5rem;
+}
+
+h1 {
+  color: var(--white);
+}
+
+.rating {
+  background: linear-gradient(var(--dark-blue), hsl(215, 27%, 12%));
+  padding: 2rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 26rem;
+}
+
+.rating__icon {
+  padding: 0.5rem;
+  background-color: hsl(202, 23%, 19%);
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.rating__heading {
+  margin-bottom: 0.5rem;
+}
+
+.rating__description,
+.thankyou__description {
+  line-height: 1.5;
+}
+
+.rating__values {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-block: 1.5rem;
+}
+
+.rating__value {
+  background-color: var(--dark-blue);
+  padding: 1.75rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--light-grey);
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.rating__value:hover,
+.rating__value.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating__value:hover + .rating__value {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.rating__button {
+  color: var(--white);
+  background-color: var(--orange);
+  width: 100%;
+  border-radius: 3rem;
+  border: none;
+  padding: 1em 2em;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.rating__button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.thankyou-state {
+  text-align: center;
+  display: none;
+}
+
+.thankyou__rate {
+  color: var(--orange);
+  padding: 0.5em 2em;
+  background-color: var(--dark-blue);
+  border-radius: 3rem;
+  width: fit-content;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.thankyou__heading {
+  margin-bottom: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
